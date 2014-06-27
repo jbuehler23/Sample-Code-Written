@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Range check</TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT Language= "Javascript">
+ var    gradetxt,	// grade input value
+		grade,		// grade as numeric
+		count,
+		sum,		// total of grades
+        average;	// average grade
+
+//Initialization
+		count = 0;
+		sum = 0;
+	
+
+// Prompt the user to input a grade from 0 to 100
+		gradetxt = window.prompt ("Enter a grade (0-100) ","0");
+		grade = parseInt(gradetxt);  //convert text to numeric
+	
+	if ( ( grade < 0 ) || (grade > 100) )
+		alert ("Invalid grade! Grade must in the 0-100 range");
+
+	document.writeln( "<br>Done processing");
+
+</SCRIPT>
+</BODY>
+</HTML>

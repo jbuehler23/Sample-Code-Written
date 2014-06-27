@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Average of 4 grades</TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT Language= "Javascript">
+
+
+// Input grade1
+	grade1txt = window.prompt ("Enter grade1 ","0");
+	grade1 = parseInt(grade1txt);  //convert text to numeric
+
+// Input grade2
+	grade2txt = window.prompt ("Enter grade2 ","0");
+	grade2 = parseInt(grade2txt);  //convert text to numeric
+
+// Input grade3
+	grade3txt = window.prompt ("Enter grade3 ","0");
+	grade3 = parseInt(grade3txt);  //convert text to numeric
+
+// Input grade4
+	grade4txt = window.prompt ("Enter grade4 ","0");
+	grade4 = parseInt(grade4txt);  //convert text to numeric
+
+
+
+
+// sum up the grades
+	sum = grade1 + grade2 + grade3 + grade4;
+
+// calculate average
+	average = sum / 4.0;
+
+
+//output results
+
+	document.writeln( "<h1>Average = " + average +"</h1>");
+
+	if ( average == 100)
+		document.writeln("<br>Perfect Score!");
+	else if ( average >= 65)
+			document.writeln("Passing Score");
+		 else
+			document.writeln("Failing Score");
+
+
+
+	document.writeln( "<br>Done processing");
+
+</SCRIPT>
+</BODY>
+</HTML>

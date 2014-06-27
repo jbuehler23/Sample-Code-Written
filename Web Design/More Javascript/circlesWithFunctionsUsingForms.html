@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+
+<TITLE>Calculating circle stats</TITLE>
+<Script>
+function calculate()
+{  
+	var radiusfield = document.forms["Circle"]["radius"].value;
+	radius = parseInt(radiusfield);
+   if (radiusfield.value == "" )
+   {
+	alert("no radius entered");
+	return false;
+   }
+   else {
+   //calculations
+   area = 3.14 * radius * radius;
+   circum = 2 * 3.14 * radius;
+   //print results
+   document.writeln("<br>Circumference = " + circum);
+   document.writeln("<br>Area = " + area);
+   }
+
+   
+
+}
+</Script>
+
+</HEAD>
+<BODY>
+
+
+<FORM NAME="Circle"  METHOD=GET  onSubmit= "return calculate()">
+Radius: <INPUT TYPE="text" NAME="radius">
+
+<INPUT TYPE="submit" VALUE="Submit" NAME="submit">
+<INPUT TYPE="reset" VALUE="Start Over" NAME="startover">
+
+
+</FORM>
+
+
+</BODY>
+</HTML>

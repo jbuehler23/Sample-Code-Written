@@ -1,0 +1,66 @@
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+U:\Software Engineering\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+U:\SVN Proj\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.CodeAnalysisLog.xml
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.lastcodeanalysissucceeded
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll.config
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.dll
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.Tests.pdb
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.dll
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\bin\Debug\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.dll
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp.Tests\obj\Debug\BusinessApp.Tests.pdb

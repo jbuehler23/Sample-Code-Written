@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Average any number of grades, user stops by entering -1</TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT Language= "Javascript">
+ var    gradetxt,	// grade input value
+		grade,		// grade as numeric
+		count,
+		sum,		// total of grades
+        average;	// average grade
+
+//Initialization
+		count = 0;
+		sum = 0;
+
+// document.writeln( "<h1 style='color : red'>ERROR ERROR ERROR</h1>" );
+
+// Prompt the user to input a grade or -1 to quit
+		gradetxt = window.prompt ("Enter a grade or -1 ","0");
+		grade = parseInt(gradetxt);  //convert text to numeric
+
+	while (grade != -1 )
+	{ // count it
+	 	 count = count + 1;
+	 // update running sum
+		 sum = sum + grade;
+	}
+
+// calculate average
+	average = sum / count;
+
+
+//output results
+	document.writeln( "<big><br>Number of grades entered: " + count );
+	document.writeln( "<br>Average: " + average + "</big>");
+
+
+	document.writeln( "<br>Done processing");
+
+</SCRIPT>
+</BODY>
+</HTML>

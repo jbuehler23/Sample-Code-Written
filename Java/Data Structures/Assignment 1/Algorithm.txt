@@ -1,0 +1,12 @@
+Algorithm:
+
+1) Read in line by line the html file (for loop)
+2) If <"words to space" is present 
+        -push the word into stack
+      If </"words> is not present
+        -pop off stack and print error message         
+3) If <!"text"
+        -do nothing
+4) If <"words" />
+        -do nothing
+5) If nothing is popped off stack print a "completed successfully" message

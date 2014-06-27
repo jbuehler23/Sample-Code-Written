@@ -1,0 +1,17 @@
+
+CS 301/600 EA                                                                      Fall 2011
+Assignment 4
+
+Sets and Maps
+
+The file "Reuters00.txt" is the same file you used in the previous assignment.
+
+ We want to determine the articles in which particular word appears.  Therefore, we want to
+ create a map with an entry for each word and a set containing the id numbers of the documents
+ that contain that word. The words should not be case sensititive.  Your program should not 
+ place numerical strings into the map. Punctuation and special characters should be removed.
+ 
+ After all articles have been read and processed your program should write the contents of the 
+ map to an output file.
+ 
+ 

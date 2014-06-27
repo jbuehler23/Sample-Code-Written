@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+
+<TITLE>Checking an Input Variable</TITLE>
+<Script>
+function checkit()
+{  var namefield = document.Sample.name;
+   if (namefield.value == "" )
+   {alert("no name entered");
+   return false;
+   }
+   return true;
+}
+</Script>
+
+</HEAD>
+<BODY>
+
+
+<FORM NAME="Sample"  METHOD=POST  onSubmit= "return(checkit());">
+Name: <INPUT TYPE="text" NAME="name">
+
+<INPUT TYPE="submit" VALUE="Submit" NAME="submit">
+<INPUT TYPE="reset" VALUE="Start Over" NAME="startover">
+
+</FORM>
+
+
+</BODY>
+</HTML>

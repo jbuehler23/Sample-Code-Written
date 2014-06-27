@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<script runat="server">
+
+  
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .newStyle1
+        {
+            width: auto;
+            line-height: normal;
+            text-align: center;
+            display: inline-block;
+        }
+        .style1
+        {
+            width: auto;
+            height: 612px;
+        }
+        .style2
+        {
+            left: 2px;
+            top: -2px;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header" class="style2">
+            <div id="title">
+                <h1>Iona College MBA Scheduler</h1>
+              
+            <div id="logindisplay">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div> 
+            
+   
+
+            </div>
+              
+   
+
+            <div class="toolbar">
+                <ul class="toolsNav">
+                    <li><a href="<%= Url.Action("Index", "Home") %>"><span>Home</span></a></li>
+                    <li class="drop"><a href="<%= Url.Action("Index", "Teacher") %>"><span>Teachers</span></a>
+                      <ul class="toolsSubNav">
+                        <li style="width:230px";><a href="<%= Url.Action("Index", "Teacher") %>"><span>Index</span></a></li>
+                        <li style="width:230px";><a href="<%= Url.Action("AddTeacher", "Teacher") %>"><span>Add Teacher</span></a></li>
+                      </ul>
+                    </li>
+
+                    <li class="drop"><a href=""><span>Locations</span></a>
+                      <ul class="toolsSubNav">
+                        <li style="width:230px";><a href="<%= Url.Action("AddLocation", "Location") %>"><span>Add Teacher</span></a></li>
+                      </ul>
+                    </li>
+
+                    <li class="drop"><a href=""><span>Students</span></a>
+                      <ul class="toolsSubNav">
+                        <li style="width:230px";><a href="<%= Url.Action("AddStudent", "Student") %>"><span>Add Student</span></a></li>
+                        <li style="width:300px";><a href="<%= Url.Action("LookupStudent", "Student") %>"><span>Student Lookup</span></a></li>
+                      </ul>
+                    </li>
+               </ul>
+          </div>
+
+        </div>
+
+
+
+
+
+
+        </div>
+
+        <div id="main" class="style1" 
+        style="background-color: #5c182d; border-style: groove; vertical-align: middle; text-align: center; line-height: normal;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <div id="footer">
+            </div>
+        </div>
+   
+</body>
+</html>

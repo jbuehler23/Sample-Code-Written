@@ -1,0 +1,45 @@
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp\bin\BusinessApp.dll
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp\bin\BusinessApp.pdb
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+c:\users\vip3r\documents\visual studio 2010\Projects\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp\bin\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp\bin\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vip3r\Desktop\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+C:\Users\Vip3r\Desktop\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+U:\Software Engineering\BusinessApp\BusinessApp\bin\BusinessApp.dll
+U:\Software Engineering\BusinessApp\BusinessApp\bin\BusinessApp.pdb
+U:\Software Engineering\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+U:\Software Engineering\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+U:\Software Engineering\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+U:\SVN Proj\BusinessApp\BusinessApp\bin\BusinessApp.dll
+U:\SVN Proj\BusinessApp\BusinessApp\bin\BusinessApp.pdb
+U:\SVN Proj\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+U:\SVN Proj\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+U:\SVN Proj\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp\bin\BusinessApp.dll
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp\bin\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+C:\Users\Vip3r\Desktop\Unix\SVN Proj\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp\obj\Debug\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp\obj\Debug\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp\bin\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp\Team1\BusinessApp\BusinessApp\bin\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp\bin\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp\bin\BusinessApp.pdb
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp\obj\Debug\BusinessApp.dll
+C:\Users\tmclaughlin\Desktop\BusinessApp2\BusinessApp\obj\Debug\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\bin\BusinessApp.dll
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\bin\BusinessApp.pdb
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\bin\EntityFramework.dll
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\bin\EntityFramework.xml
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\obj\Debug\BusinessApp.dll
+C:\Users\Vip3r\Desktop\4.2.13\BusinessApp2\BusinessApp\obj\Debug\BusinessApp.pdb

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Treehouse Logo in three.js</title>
+  <meta charset="utf-8">
+</head>
+<body style="margin: 0;">
+
+  <script src="js/three.min.js"></script>
+  <script src="js/OrbitControls.js"></script>
+
+  <script>
+
+    //in order to run in chrome:
+	/*
+	Start Chrome executable with a command line flag:
+
+		chrome --allow-file-access-from-files
+	*/
+	//init variables
+    var scene, camera, renderer;
+
+    init();
+    animate();
+
+    //setting up scene
+    function init() {
+
+      ///scene initialization
+      scene = new THREE.Scene();
+      var WIDTH = window.innerWidth,
+          HEIGHT = window.innerHeight;
+
+      //creating the renderer and appending it to DOM
+      renderer = new THREE.WebGLRenderer({antialias:true});
+      renderer.setSize(WIDTH, HEIGHT);
+      document.body.appendChild(renderer.domElement);
+
+      ///set up camera, zoom out, and add to scene
+	//FOV = 45, aspect = w/h, near = .1 (where camera wills tart rendering), far = 20000 (draw distance)
+      camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 20000);
+      camera.position.set(0,6,0);
+      scene.add(camera);
+
+      ///resizing the browser window
+			//need event listener - get new w/h and store in new vars, must recalc aspect ratio
+			//use updateProjectionMatrix() so scene will auto-update
+      window.addEventListener('resize', function() {
+        var WIDTH = window.innerWidth,
+            HEIGHT = window.innerHeight;
+        renderer.setSize(WIDTH, HEIGHT);
+        camera.aspect = WIDTH / HEIGHT;
+        camera.updateProjectionMatrix();
+      });
+
+			//background color
+		renderer.setClearColorHex(0x333F47, 1);
+
+      //lighting code here
+      var light = new THREE.PointLight(0xffffff);
+      light.position.set(-100,200,100);
+      scene.add(light);
+
+      //load mesh, model was made using blender
+      var loader = new THREE.JSONLoader();
+      loader.load( "models/firstBlend.js", function(geometry){
+        var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+        mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+      });
+
+      //creating controls
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    }
+
+
+    //animation function
+    function animate() {
+
+//helps with optimization - doesnt animate uselessly if not on current tab
+	//cool function
+  	requestAnimationFrame(animate);
+      
+      // render
+      renderer.render(scene, camera);
+      controls.update();
+
+    }
+
+  </script>
+
+</body>
+</html>

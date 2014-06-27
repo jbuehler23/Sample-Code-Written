@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="software_projModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="software_projModelStoreContainer">
+    <EntitySet Name="core_courses" EntityType="software_projModel.Store.core_courses" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="courses" EntityType="software_projModel.Store.courses" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="course_sections" EntityType="software_projModel.Store.course_sections" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="degree_requirements" EntityType="software_projModel.Store.degree_requirements" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="elective_courses" EntityType="software_projModel.Store.elective_courses" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="instructor" EntityType="software_projModel.Store.instructor" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="periods" EntityType="software_projModel.Store.periods" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="required_courses" EntityType="software_projModel.Store.required_courses" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="students_table" EntityType="software_projModel.Store.students_table" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="student_courses" EntityType="software_projModel.Store.student_courses" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="student_degrees" EntityType="software_projModel.Store.student_degrees" store:Type="Tables" Schema="software_proj" />
+    <EntitySet Name="taken" EntityType="software_projModel.Store.taken" store:Type="Tables" Schema="software_proj" />
+  </EntityContainer>
+  <EntityType Name="core_courses">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Degree_id" Type="int" Nullable="false" />
+    <Property Name="Course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="courses">
+    <Key>
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Course_id" Type="int" Nullable="false" />
+    <Property Name="Course_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Course_Credits" Type="int" />
+  </EntityType>
+  <EntityType Name="course_sections">
+    <Key>
+      <PropertyRef Name="Course_D_id" />
+    </Key>
+    <Property Name="Course_D_id" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Course_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Course_Number" Type="varchar" MaxLength="45" />
+    <Property Name="Course_Section" Type="varchar" MaxLength="45" />
+    <Property Name="Course_id" Type="int" />
+    <Property Name="Location" Type="varchar" MaxLength="45" />
+    <Property Name="Instructor_id" Type="int" />
+    <Property Name="Term" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="degree_requirements">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+    </Key>
+    <Property Name="Degree_id" Type="int" Nullable="false" />
+    <Property Name="Degree_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Total_Degree_Credits" Type="int" />
+    <Property Name="Core_Course_Credits" Type="int" />
+    <Property Name="Required_Course_Credits" Type="int" />
+    <Property Name="Elective_Course_Credits" Type="int" />
+  </EntityType>
+  <EntityType Name="elective_courses">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Degree_id" Type="int" Nullable="false" />
+    <Property Name="Course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instructor">
+    <Key>
+      <PropertyRef Name="Instructor_id" />
+    </Key>
+    <Property Name="Instructor_id" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Full_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Email" Type="varchar" MaxLength="45" />
+    <Property Name="Phone_Number" Type="varchar" MaxLength="11" />
+    <Property Name="Department" Type="varchar" MaxLength="45" />
+    <Property Name="Pref_Location" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="periods">
+    <Key>
+      <PropertyRef Name="Trimester" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Trimester" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="required_courses">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Degree_id" Type="int" Nullable="false" />
+    <Property Name="Course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="students_table">
+    <Key>
+      <PropertyRef Name="IONA_Student_id" />
+    </Key>
+    <Property Name="IONA_Student_id" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="First_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Full_Name" Type="varchar" MaxLength="45" />
+    <Property Name="Date_of_Birth" Type="varchar" MaxLength="45" />
+    <Property Name="Age" Type="varchar" MaxLength="45" />
+    <Property Name="Email" Type="varchar" MaxLength="45" />
+    <Property Name="Phone_Number" Type="varchar" MaxLength="45" />
+    <Property Name="Street_Address" Type="varchar" MaxLength="45" />
+    <Property Name="City" Type="varchar" MaxLength="45" />
+    <Property Name="Zip_Code" Type="varchar" MaxLength="45" />
+    <Property Name="Total_Credits_Complete" Type="varchar" MaxLength="45" />
+    <Property Name="Prefered_Location" Type="varchar" MaxLength="45" />
+    <Property Name="MBA_Speed" Type="char" MaxLength="1" />
+    <Property Name="Student_Type" Type="char" MaxLength="1" />
+    <Property Name="Days_Available" Type="varchar" MaxLength="45" />
+    <Property Name="Athlete" Type="char" MaxLength="1" />
+    <Property Name="Loans" Type="char" MaxLength="1" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="student_courses">
+    <Key>
+      <PropertyRef Name="Student_D_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Student_D_id" Type="int" Nullable="false" />
+    <Property Name="Course_id" Type="int" Nullable="false" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="student_degrees">
+    <Key>
+      <PropertyRef Name="Student_D_id" />
+    </Key>
+    <Property Name="Student_D_id" Type="int" Nullable="false" />
+    <Property Name="IONA_Student_id" Type="varchar" MaxLength="45" />
+    <Property Name="Degree_id" Type="int" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+    <Property Name="Credits_Complete" Type="int" />
+  </EntityType>
+  <EntityType Name="taken">
+    <Key>
+      <PropertyRef Name="IONA_Student_id" />
+      <PropertyRef Name="Course_D_id" />
+    </Key>
+    <Property Name="IONA_Student_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Course_D_id" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+</Schema>

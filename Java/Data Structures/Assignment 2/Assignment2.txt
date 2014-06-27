@@ -1,0 +1,36 @@
+Algorithm
+
+----For PairType class---
+1) Initialize data variables for E1 and E2
+2) In the constructor, pass each data type and set equal variables
+3) Get first of the pair and return it
+4) Set the first of pair to the data variable
+5) Get second of the pair and return it
+6) Set the second of the pair to the other data variable
+
+---For Assignment2(tag checker)---
+1. Get file name from user
+2. Try to open file, if not - exit
+4. Create stack to hold tags and line numbers
+5. Initialize s counter for the lines, to zero
+6. For each line in the input file:
+   a. read the first line
+   b. increment counter
+   c. while '<' appears on the line:
+	i. Look for '>' after position of '<'(end)
+	   (if not, print error message, exit)
+	ii. Extract text between the position and end, put into "temp" variable
+	iii. If first character of "temp" is '!', advance position to end + 1
+	iv. If LAST character of temp is '/', advance position to end + 1
+	v. If FIRST character of temp is '/',
+	   -remove '/' and compare with top of stack
+	      -> if no match, print error, exit
+	      -> if match, pop tag+counter onto stack, advance position to end + 1
+        vi. (open tag)
+	   -check for a blank in "temp"
+	      -> remove everything from blank to end of temp
+	   -push the tag+counter onto stack
+	   -advance position to end + 1
+7. See if stack is empty
+   a. if it is, there are no errors
+   b. if not, errors -> print message, exit	

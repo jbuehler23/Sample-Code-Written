@@ -1,0 +1,22 @@
+
+CS 301/600 EA                                                                      Fall 2011
+Assignment 3
+
+Sets
+
+The file "Reuters00.txt" contain a number of news articles in the following format:
+
+<ID>idNumber</ID>
+<BODY>
+Text of news article
+</BODY>
+
+ Write a program that reads in each news article and places each word in the text body
+ of the article into a set.  The words should not be case sensititive, that is the
+ word "The" and the word "the" are the same word.  Your program should not place 
+ numerical strings into the set, and punctuation should be removed.
+ 
+ After each article has been read and all words located the id number of the article and the 
+ contents of the set should be sent to an output file with one word per line.
+ 
+ 

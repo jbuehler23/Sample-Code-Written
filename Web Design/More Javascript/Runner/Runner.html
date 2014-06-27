@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>Runners</TITLE>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!-- // HIDE FROM INCOMPATIBLE BROWSERS
+var runners = new Array(6);
+var curRunner = 0;
+var startRunning;
+runners[0] = "runner0.jpg";
+runners[1] = "runner1.jpg";
+runners[2] = "runner2.jpg";
+runners[3] = "runner3.jpg";
+runners[4] = "runner4.jpg";
+runners[5] = "runner5.jpg";
+
+function marathon() {
+	if (curRunner == 5)
+		curRunner = 0;
+	else
+		curRunner++;
+	document.animation.src = runners[curRunner];
+}
+// STOP HIDING FROM INCOMPATIBLE BROWSERS -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<IMG SRC="runner0.jpg" NAME="animation"><P>
+<FORM>
+<INPUT TYPE="button" NAME="run" VALUE=" Run "
+onClick="startRunning=setInterval('marathon()',500);">
+<INPUT TYPE="button" NAME="stop" VALUE=" Stop "
+	onClick="clearInterval(startRunning);">
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="software_projModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="software_projModelStoreContainer">
+          <EntitySet Name="core_courses" EntityType="software_projModel.Store.core_courses" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="courses" EntityType="software_projModel.Store.courses" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="course_sections" EntityType="software_projModel.Store.course_sections" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="degree_requirements" EntityType="software_projModel.Store.degree_requirements" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="elective_courses" EntityType="software_projModel.Store.elective_courses" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="instructor" EntityType="software_projModel.Store.instructor" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="periods" EntityType="software_projModel.Store.periods" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="required_courses" EntityType="software_projModel.Store.required_courses" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="students_table" EntityType="software_projModel.Store.students_table" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="student_courses" EntityType="software_projModel.Store.student_courses" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="student_degrees" EntityType="software_projModel.Store.student_degrees" store:Type="Tables" Schema="software_proj" />
+          <EntitySet Name="taken" EntityType="software_projModel.Store.taken" store:Type="Tables" Schema="software_proj" />
+        </EntityContainer>
+        <EntityType Name="core_courses">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Degree_id" Type="int" Nullable="false" />
+          <Property Name="Course_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="courses">
+          <Key>
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Course_id" Type="int" Nullable="false" />
+          <Property Name="Course_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Course_Credits" Type="int" />
+        </EntityType>
+        <EntityType Name="course_sections">
+          <Key>
+            <PropertyRef Name="Course_D_id" />
+          </Key>
+          <Property Name="Course_D_id" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="Course_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Course_Number" Type="varchar" MaxLength="45" />
+          <Property Name="Course_Section" Type="varchar" MaxLength="45" />
+          <Property Name="Course_id" Type="int" />
+          <Property Name="Location" Type="varchar" MaxLength="45" />
+          <Property Name="Instructor_id" Type="int" />
+          <Property Name="Term" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="degree_requirements">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+          </Key>
+          <Property Name="Degree_id" Type="int" Nullable="false" />
+          <Property Name="Degree_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Total_Degree_Credits" Type="int" />
+          <Property Name="Core_Course_Credits" Type="int" />
+          <Property Name="Required_Course_Credits" Type="int" />
+          <Property Name="Elective_Course_Credits" Type="int" />
+        </EntityType>
+        <EntityType Name="elective_courses">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Degree_id" Type="int" Nullable="false" />
+          <Property Name="Course_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="instructor">
+          <Key>
+            <PropertyRef Name="Instructor_id" />
+          </Key>
+          <Property Name="Instructor_id" Type="int" Nullable="false" />
+          <Property Name="First_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Email" Type="varchar" MaxLength="45" />
+          <Property Name="Phone_Number" Type="varchar" MaxLength="11" />
+          <Property Name="Department" Type="varchar" MaxLength="45" />
+          <Property Name="Pref_Location" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="periods">
+          <Key>
+            <PropertyRef Name="Trimester" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Trimester" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="Course_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="required_courses">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Degree_id" Type="int" Nullable="false" />
+          <Property Name="Course_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="students_table">
+          <Key>
+            <PropertyRef Name="IONA_Student_id" />
+          </Key>
+          <Property Name="IONA_Student_id" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="First_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="45" />
+          <Property Name="Date_of_Birth" Type="varchar" MaxLength="45" />
+          <Property Name="Age" Type="varchar" MaxLength="45" />
+          <Property Name="Email" Type="varchar" MaxLength="45" />
+          <Property Name="Phone_Number" Type="varchar" MaxLength="45" />
+          <Property Name="Street_Address" Type="varchar" MaxLength="45" />
+          <Property Name="City" Type="varchar" MaxLength="45" />
+          <Property Name="Zip_Code" Type="varchar" MaxLength="45" />
+          <Property Name="Total_Credits_Complete" Type="varchar" MaxLength="45" />
+          <Property Name="Prefered_Location" Type="varchar" MaxLength="45" />
+          <Property Name="MBA_Speed" Type="char" MaxLength="1" />
+          <Property Name="Student_Type" Type="char" MaxLength="1" />
+          <Property Name="Days_Available" Type="varchar" MaxLength="45" />
+          <Property Name="Athlete" Type="char" MaxLength="1" />
+          <Property Name="Loans" Type="char" MaxLength="1" />
+          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="student_courses">
+          <Key>
+            <PropertyRef Name="Student_D_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Student_D_id" Type="int" Nullable="false" />
+          <Property Name="Course_id" Type="int" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="student_degrees">
+          <Key>
+            <PropertyRef Name="Student_D_id" />
+          </Key>
+          <Property Name="Student_D_id" Type="int" Nullable="false" />
+          <Property Name="IONA_Student_id" Type="varchar" MaxLength="45" />
+          <Property Name="Degree_id" Type="int" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="Credits_Complete" Type="int" />
+        </EntityType>
+        <EntityType Name="taken">
+          <Key>
+            <PropertyRef Name="IONA_Student_id" />
+            <PropertyRef Name="Course_D_id" />
+          </Key>
+          <Property Name="IONA_Student_id" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Course_D_id" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="software_projModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="software_projEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="core_courses" EntityType="software_projModel.core_courses" />
+          <EntitySet Name="courses" EntityType="software_projModel.cours" />
+          <EntitySet Name="course_sections" EntityType="software_projModel.course_sections" />
+          <EntitySet Name="degree_requirements" EntityType="software_projModel.degree_requirements" />
+          <EntitySet Name="elective_courses" EntityType="software_projModel.elective_courses" />
+          <EntitySet Name="instructors" EntityType="software_projModel.instructor" />
+          <EntitySet Name="periods" EntityType="software_projModel.period" />
+          <EntitySet Name="required_courses" EntityType="software_projModel.required_courses" />
+          <EntitySet Name="students_table" EntityType="software_projModel.students_table" />
+          <EntitySet Name="student_courses" EntityType="software_projModel.student_courses" />
+          <EntitySet Name="student_degrees" EntityType="software_projModel.student_degrees" />
+          <EntitySet Name="takens" EntityType="software_projModel.taken" />
+        </EntityContainer>
+        <EntityType Name="core_courses">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Degree_id" Type="Int32" Nullable="false" />
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+          <Property Name="Course_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Course_Credits" Type="Int32" />
+        </EntityType>
+        <EntityType Name="course_sections">
+          <Key>
+            <PropertyRef Name="Course_D_id" />
+          </Key>
+          <Property Name="Course_D_id" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Course_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Course_Number" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Course_Section" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Course_id" Type="Int32" />
+          <Property Name="Location" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Instructor_id" Type="Int32" />
+          <Property Name="Term" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="degree_requirements">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+          </Key>
+          <Property Name="Degree_id" Type="Int32" Nullable="false" />
+          <Property Name="Degree_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Total_Degree_Credits" Type="Int32" />
+          <Property Name="Core_Course_Credits" Type="Int32" />
+          <Property Name="Required_Course_Credits" Type="Int32" />
+          <Property Name="Elective_Course_Credits" Type="Int32" />
+        </EntityType>
+        <EntityType Name="elective_courses">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Degree_id" Type="Int32" Nullable="false" />
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="instructor">
+          <Key>
+            <PropertyRef Name="Instructor_id" />
+          </Key>
+          <Property Name="Instructor_id" Type="Int32" Nullable="false" />
+          <Property Name="First_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_Number" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="Department" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Pref_Location" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="period">
+          <Key>
+            <PropertyRef Name="Trimester" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Trimester" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="required_courses">
+          <Key>
+            <PropertyRef Name="Degree_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Degree_id" Type="Int32" Nullable="false" />
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="students_table">
+          <Key>
+            <PropertyRef Name="IONA_Student_id" />
+          </Key>
+          <Property Name="IONA_Student_id" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="First_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Date_of_Birth" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Age" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_Number" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Street_Address" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Zip_Code" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Total_Credits_Complete" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Prefered_Location" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="MBA_Speed" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Student_Type" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Days_Available" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Athlete" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Loans" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="student_courses">
+          <Key>
+            <PropertyRef Name="Student_D_id" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="Student_D_id" Type="Int32" Nullable="false" />
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="student_degrees">
+          <Key>
+            <PropertyRef Name="Student_D_id" />
+          </Key>
+          <Property Name="Student_D_id" Type="Int32" Nullable="false" />
+          <Property Name="IONA_Student_id" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="Degree_id" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Credits_Complete" Type="Int32" />
+        </EntityType>
+        <EntityType Name="taken">
+          <Key>
+            <PropertyRef Name="IONA_Student_id" />
+            <PropertyRef Name="Course_D_id" />
+          </Key>
+          <Property Name="IONA_Student_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Course_D_id" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="software_projModelStoreContainer" CdmEntityContainer="software_projEntities">
+          <EntitySetMapping Name="core_courses"><EntityTypeMapping TypeName="software_projModel.core_courses"><MappingFragment StoreEntitySet="core_courses">
+            <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="courses"><EntityTypeMapping TypeName="software_projModel.cours"><MappingFragment StoreEntitySet="courses">
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+            <ScalarProperty Name="Course_Name" ColumnName="Course_Name" />
+            <ScalarProperty Name="Course_Credits" ColumnName="Course_Credits" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="course_sections"><EntityTypeMapping TypeName="software_projModel.course_sections"><MappingFragment StoreEntitySet="course_sections">
+            <ScalarProperty Name="Course_D_id" ColumnName="Course_D_id" />
+            <ScalarProperty Name="Course_Name" ColumnName="Course_Name" />
+            <ScalarProperty Name="Course_Number" ColumnName="Course_Number" />
+            <ScalarProperty Name="Course_Section" ColumnName="Course_Section" />
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="Instructor_id" ColumnName="Instructor_id" />
+            <ScalarProperty Name="Term" ColumnName="Term" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="degree_requirements"><EntityTypeMapping TypeName="software_projModel.degree_requirements"><MappingFragment StoreEntitySet="degree_requirements">
+            <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+            <ScalarProperty Name="Degree_Name" ColumnName="Degree_Name" />
+            <ScalarProperty Name="Total_Degree_Credits" ColumnName="Total_Degree_Credits" />
+            <ScalarProperty Name="Core_Course_Credits" ColumnName="Core_Course_Credits" />
+            <ScalarProperty Name="Required_Course_Credits" ColumnName="Required_Course_Credits" />
+            <ScalarProperty Name="Elective_Course_Credits" ColumnName="Elective_Course_Credits" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="elective_courses"><EntityTypeMapping TypeName="software_projModel.elective_courses"><MappingFragment StoreEntitySet="elective_courses">
+            <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="instructors"><EntityTypeMapping TypeName="software_projModel.instructor"><MappingFragment StoreEntitySet="instructor">
+            <ScalarProperty Name="Instructor_id" ColumnName="Instructor_id" />
+            <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+            <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+            <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+            <ScalarProperty Name="Department" ColumnName="Department" />
+            <ScalarProperty Name="Pref_Location" ColumnName="Pref_Location" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="periods"><EntityTypeMapping TypeName="software_projModel.period"><MappingFragment StoreEntitySet="periods">
+            <ScalarProperty Name="Trimester" ColumnName="Trimester" />
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="required_courses"><EntityTypeMapping TypeName="software_projModel.required_courses"><MappingFragment StoreEntitySet="required_courses">
+            <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="students_table"><EntityTypeMapping TypeName="software_projModel.students_table"><MappingFragment StoreEntitySet="students_table">
+            <ScalarProperty Name="IONA_Student_id" ColumnName="IONA_Student_id" />
+            <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+            <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+            <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+            <ScalarProperty Name="Date_of_Birth" ColumnName="Date_of_Birth" />
+            <ScalarProperty Name="Age" ColumnName="Age" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+            <ScalarProperty Name="Street_Address" ColumnName="Street_Address" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+            <ScalarProperty Name="Total_Credits_Complete" ColumnName="Total_Credits_Complete" />
+            <ScalarProperty Name="Prefered_Location" ColumnName="Prefered_Location" />
+            <ScalarProperty Name="MBA_Speed" ColumnName="MBA_Speed" />
+            <ScalarProperty Name="Student_Type" ColumnName="Student_Type" />
+            <ScalarProperty Name="Days_Available" ColumnName="Days_Available" />
+            <ScalarProperty Name="Athlete" ColumnName="Athlete" />
+            <ScalarProperty Name="Loans" ColumnName="Loans" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="student_courses"><EntityTypeMapping TypeName="software_projModel.student_courses"><MappingFragment StoreEntitySet="student_courses">
+            <ScalarProperty Name="Student_D_id" ColumnName="Student_D_id" />
+            <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="student_degrees"><EntityTypeMapping TypeName="software_projModel.student_degrees"><MappingFragment StoreEntitySet="student_degrees">
+            <ScalarProperty Name="Student_D_id" ColumnName="Student_D_id" />
+            <ScalarProperty Name="IONA_Student_id" ColumnName="IONA_Student_id" />
+            <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="Credits_Complete" ColumnName="Credits_Complete" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="takens"><EntityTypeMapping TypeName="software_projModel.taken"><MappingFragment StoreEntitySet="taken">
+            <ScalarProperty Name="IONA_Student_id" ColumnName="IONA_Student_id" />
+            <ScalarProperty Name="Course_D_id" ColumnName="Course_D_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="software_projModel.core_courses" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.cours" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.course_sections" Width="1.5" PointX="0.75" PointY="3.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.degree_requirements" Width="1.5" PointX="2.75" PointY="3.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.elective_courses" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.instructor" Width="1.5" PointX="4.75" PointY="3.75" Height="2.5571907552083322" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.period" Width="1.5" PointX="6.75" PointY="0.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.required_courses" Width="1.5" PointX="6.75" PointY="3.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.students_table" Width="1.5" PointX="6.75" PointY="6.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.student_courses" Width="1.5" PointX="0.75" PointY="7.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.student_degrees" Width="1.5" PointX="2.75" PointY="7.75" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="software_projModel.taken" Width="1.5" PointX="8.75" PointY="0.75" Height="1.4033821614583317" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

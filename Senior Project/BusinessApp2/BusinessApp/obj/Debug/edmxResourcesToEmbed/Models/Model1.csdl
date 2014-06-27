@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="software_projModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="software_projEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="core_courses" EntityType="software_projModel.core_courses" />
+    <EntitySet Name="courses" EntityType="software_projModel.cours" />
+    <EntitySet Name="course_sections" EntityType="software_projModel.course_sections" />
+    <EntitySet Name="degree_requirements" EntityType="software_projModel.degree_requirements" />
+    <EntitySet Name="elective_courses" EntityType="software_projModel.elective_courses" />
+    <EntitySet Name="instructors" EntityType="software_projModel.instructor" />
+    <EntitySet Name="periods" EntityType="software_projModel.period" />
+    <EntitySet Name="required_courses" EntityType="software_projModel.required_courses" />
+    <EntitySet Name="students_table" EntityType="software_projModel.students_table" />
+    <EntitySet Name="student_courses" EntityType="software_projModel.student_courses" />
+    <EntitySet Name="student_degrees" EntityType="software_projModel.student_degrees" />
+    <EntitySet Name="takens" EntityType="software_projModel.taken" />
+  </EntityContainer>
+  <EntityType Name="core_courses">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Degree_id" Type="Int32" Nullable="false" />
+    <Property Name="Course_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cours">
+    <Key>
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Course_id" Type="Int32" Nullable="false" />
+    <Property Name="Course_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Course_Credits" Type="Int32" />
+  </EntityType>
+  <EntityType Name="course_sections">
+    <Key>
+      <PropertyRef Name="Course_D_id" />
+    </Key>
+    <Property Name="Course_D_id" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Course_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Course_Number" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Course_Section" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Course_id" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Instructor_id" Type="Int32" />
+    <Property Name="Term" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="degree_requirements">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+    </Key>
+    <Property Name="Degree_id" Type="Int32" Nullable="false" />
+    <Property Name="Degree_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Total_Degree_Credits" Type="Int32" />
+    <Property Name="Core_Course_Credits" Type="Int32" />
+    <Property Name="Required_Course_Credits" Type="Int32" />
+    <Property Name="Elective_Course_Credits" Type="Int32" />
+  </EntityType>
+  <EntityType Name="elective_courses">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Degree_id" Type="Int32" Nullable="false" />
+    <Property Name="Course_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instructor">
+    <Key>
+      <PropertyRef Name="Instructor_id" />
+    </Key>
+    <Property Name="Instructor_id" Type="Int32" Nullable="false" />
+    <Property Name="First_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Full_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Phone_Number" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="Department" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Pref_Location" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="period">
+    <Key>
+      <PropertyRef Name="Trimester" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Trimester" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Course_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="required_courses">
+    <Key>
+      <PropertyRef Name="Degree_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Degree_id" Type="Int32" Nullable="false" />
+    <Property Name="Course_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="students_table">
+    <Key>
+      <PropertyRef Name="IONA_Student_id" />
+    </Key>
+    <Property Name="IONA_Student_id" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="First_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Full_Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Date_of_Birth" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Age" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Phone_Number" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Street_Address" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Zip_Code" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Total_Credits_Complete" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Prefered_Location" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="MBA_Speed" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="Student_Type" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="Days_Available" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Athlete" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="Loans" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="student_courses">
+    <Key>
+      <PropertyRef Name="Student_D_id" />
+      <PropertyRef Name="Course_id" />
+    </Key>
+    <Property Name="Student_D_id" Type="Int32" Nullable="false" />
+    <Property Name="Course_id" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="student_degrees">
+    <Key>
+      <PropertyRef Name="Student_D_id" />
+    </Key>
+    <Property Name="Student_D_id" Type="Int32" Nullable="false" />
+    <Property Name="IONA_Student_id" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="Degree_id" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="Credits_Complete" Type="Int32" />
+  </EntityType>
+  <EntityType Name="taken">
+    <Key>
+      <PropertyRef Name="IONA_Student_id" />
+      <PropertyRef Name="Course_D_id" />
+    </Key>
+    <Property Name="IONA_Student_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Course_D_id" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

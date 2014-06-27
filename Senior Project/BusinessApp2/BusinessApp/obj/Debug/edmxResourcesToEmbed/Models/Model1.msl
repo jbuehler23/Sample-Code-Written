@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="software_projModelStoreContainer" CdmEntityContainer="software_projEntities">
+    <EntitySetMapping Name="core_courses">
+      <EntityTypeMapping TypeName="software_projModel.core_courses">
+        <MappingFragment StoreEntitySet="core_courses">
+          <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="software_projModel.cours">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          <ScalarProperty Name="Course_Name" ColumnName="Course_Name" />
+          <ScalarProperty Name="Course_Credits" ColumnName="Course_Credits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course_sections">
+      <EntityTypeMapping TypeName="software_projModel.course_sections">
+        <MappingFragment StoreEntitySet="course_sections">
+          <ScalarProperty Name="Course_D_id" ColumnName="Course_D_id" />
+          <ScalarProperty Name="Course_Name" ColumnName="Course_Name" />
+          <ScalarProperty Name="Course_Number" ColumnName="Course_Number" />
+          <ScalarProperty Name="Course_Section" ColumnName="Course_Section" />
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Instructor_id" ColumnName="Instructor_id" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="degree_requirements">
+      <EntityTypeMapping TypeName="software_projModel.degree_requirements">
+        <MappingFragment StoreEntitySet="degree_requirements">
+          <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+          <ScalarProperty Name="Degree_Name" ColumnName="Degree_Name" />
+          <ScalarProperty Name="Total_Degree_Credits" ColumnName="Total_Degree_Credits" />
+          <ScalarProperty Name="Core_Course_Credits" ColumnName="Core_Course_Credits" />
+          <ScalarProperty Name="Required_Course_Credits" ColumnName="Required_Course_Credits" />
+          <ScalarProperty Name="Elective_Course_Credits" ColumnName="Elective_Course_Credits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elective_courses">
+      <EntityTypeMapping TypeName="software_projModel.elective_courses">
+        <MappingFragment StoreEntitySet="elective_courses">
+          <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instructors">
+      <EntityTypeMapping TypeName="software_projModel.instructor">
+        <MappingFragment StoreEntitySet="instructor">
+          <ScalarProperty Name="Instructor_id" ColumnName="Instructor_id" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Pref_Location" ColumnName="Pref_Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="periods">
+      <EntityTypeMapping TypeName="software_projModel.period">
+        <MappingFragment StoreEntitySet="periods">
+          <ScalarProperty Name="Trimester" ColumnName="Trimester" />
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="required_courses">
+      <EntityTypeMapping TypeName="software_projModel.required_courses">
+        <MappingFragment StoreEntitySet="required_courses">
+          <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students_table">
+      <EntityTypeMapping TypeName="software_projModel.students_table">
+        <MappingFragment StoreEntitySet="students_table">
+          <ScalarProperty Name="IONA_Student_id" ColumnName="IONA_Student_id" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Date_of_Birth" ColumnName="Date_of_Birth" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Street_Address" ColumnName="Street_Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="Total_Credits_Complete" ColumnName="Total_Credits_Complete" />
+          <ScalarProperty Name="Prefered_Location" ColumnName="Prefered_Location" />
+          <ScalarProperty Name="MBA_Speed" ColumnName="MBA_Speed" />
+          <ScalarProperty Name="Student_Type" ColumnName="Student_Type" />
+          <ScalarProperty Name="Days_Available" ColumnName="Days_Available" />
+          <ScalarProperty Name="Athlete" ColumnName="Athlete" />
+          <ScalarProperty Name="Loans" ColumnName="Loans" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_courses">
+      <EntityTypeMapping TypeName="software_projModel.student_courses">
+        <MappingFragment StoreEntitySet="student_courses">
+          <ScalarProperty Name="Student_D_id" ColumnName="Student_D_id" />
+          <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_degrees">
+      <EntityTypeMapping TypeName="software_projModel.student_degrees">
+        <MappingFragment StoreEntitySet="student_degrees">
+          <ScalarProperty Name="Student_D_id" ColumnName="Student_D_id" />
+          <ScalarProperty Name="IONA_Student_id" ColumnName="IONA_Student_id" />
+          <ScalarProperty Name="Degree_id" ColumnName="Degree_id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Credits_Complete" ColumnName="Credits_Complete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="takens">
+      <EntityTypeMapping TypeName="software_projModel.taken">
+        <MappingFragment StoreEntitySet="taken">
+          <ScalarProperty Name="IONA_Student_id" ColumnName="IONA_Student_id" />
+          <ScalarProperty Name="Course_D_id" ColumnName="Course_D_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

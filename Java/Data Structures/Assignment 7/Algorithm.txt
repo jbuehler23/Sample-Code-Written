@@ -1,0 +1,45 @@
+Joe Buehler
+Algorithm
+Assignment 7
+
+1) Read the file (News.txt) in
+  A. While News.txt has another line
+    i. Dump the file into a string builder
+2) Read the dictionary file in
+  A. While Unabr2u.txt has another line
+    i. Dump the file into a string builder
+    ii. Send all letters to lowercase
+3) While News.txt has another letter
+  A. If the next letters are '<ID>'
+    i. If the next letter is an integer
+	- Put the next integers into the ListMap
+  B. If the next letters are '<BODY>'
+    i. foreach char in '<BODY>'
+   	- if the char is punctuation
+          1. Append to the string builder all that isn't punctuation
+    i. If the next word is in Unabr2u.txt
+        - Put that word to the ListMap
+    ii. Else do nothing
+4) Create an Iterator for the ListMap
+5) Create an integer freq variable
+6) While Iterator of original ListMap has next
+  A. Create a temp ListMap
+  B. While iterator of original ListMap has next
+  C. Get next word
+  D. If the ListMap contains that word
+    i. Put that word into temp ListMap
+    ii. For each time the temp ListMap contains that word
+      1. freq++
+      2. clear temp ListMap
+7) Create a temp ListMap
+9) While Iterator of Original ListMap has next
+  A. Get next word or integer
+  B. If the ListMap contains that word or integer
+    i. Put into temp once
+  C. Print temp + freq
+
+    
+    
+
+  
+

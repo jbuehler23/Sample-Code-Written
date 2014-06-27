@@ -1,0 +1,30 @@
+
+CS 301/600 EA                                                                      Fall 2011
+Assignment 2
+
+Stacks
+
+Part 1.
+The Java Stack class allows us to put single items onto the stack.  Sometimes it is more convenient 
+to group items together and put them on the stack.  This can be done by creating a simple class 
+and then putting instances of this class onto the stack.  In this exercide we will want to put
+pairs of items onto the stack.  So you are going to create a class called PairType.  The class will 
+be used as a container for a pair of items of any type.  That is, the class will look like:
+
+public class PairType<E1, E2>
+{
+    //your instance variables and methods
+}
+
+The first item in the pair will be of type E1, the second item will beof type E2.
+Your class should have get and set methods for the two items.
+
+Part 2.
+In the first assignment you found tags and checked to see if the tags were properly matched.  When 
+you found a tag you plaed it on the stack.  In this assignment I want you to save the tag and its 
+line number on the stack.  With this information you can give the user more information if an
+error is detected.  That is, if you find an unmatched open tag you can tell the user the location
+in the document where the error has occurred.
+
+Use the file Alice.html to test your application.
+ 

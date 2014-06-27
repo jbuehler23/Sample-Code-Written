@@ -1,0 +1,26 @@
+1. Get file name from user
+2. Try to open file, if not - exit
+3. Open an output file
+4. Create stack to hold tags
+5. Initialize s counter for the lines, to zero
+6. For each line in the input file:
+   a. read the first line
+   b. increment counter
+   c. while '<' appears on the line:
+	i. Look for '>' after position of '<'(end)
+	   (if not, print error message, exit)
+	ii. Extract text between the position and end, put into "temp" variable
+	iii. If first character of "temp" is '!', advance position to end + 1
+	iv. If LAST character of temp is '/', advance position to end + 1
+	v. If FIRST character of temp is '/',
+	   -remove '/' and compare with top of stack
+	      -> if no match, print error, exit
+	      -> if match, pop stack, advance position to end + 1
+        vi. (open tag)
+	   -check for a blank in "temp"
+	      -> remove everything from blank to end of temp
+	   -push the tag onto stack
+	   -advance position to end + 1
+7. See if stack is empty
+   a. if it is, there are no errors
+   b. if not, errors -> print message, exit	
